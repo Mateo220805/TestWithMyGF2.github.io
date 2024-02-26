@@ -41,12 +41,12 @@ padding: 20px;
   color: #000; /* O cualquier otro color que resalte sobre el fondo */
   text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7); /* Sombra de texto para mejorar la legibilidad */
 }
+
 #main-title {
   text-shadow: 15px 7px 5px rgba(0, 0, 0, 0.5);
   font-size: 5em; /* Adjust the size as needed */
   margin-bottom: 0.5em; /* Spacing below the title */
   color: #ffffff; /* White color for the title text */
-  
 }
 
 #intro-text {
@@ -145,38 +145,93 @@ button[type="submit"]:hover {
 }
 
 /* Estilos responsivos para dispositivos con anchos menores a 768px (tabletas y móviles) */
-@media (max-width: 768px) {
-
-  .container, .full-page-background {
-    padding: 0px; /* Reduce el padding para dispositivos más pequeños */
-    width: 100%; /* Deja un pequeño margen en los lados */
-    height: auto;
-  }
-
-  .title-container h1 {
-    font-size: 3em; /* Reduce el tamaño del texto para que se ajuste mejor */
+@media only screen and (max-width: 480px) { /* Smartphones en modo vertical */
+  #main-title {
+    text-shadow: 15px 7px 5px rgba(0, 0, 0, 0.5);
+    font-size: 1.5em; /* Adjust the size as needed */
+    margin-bottom: 0.5em; /* Spacing below the title */
+    color: #ffffff; /* White color for the title text */
+    padding: auto;
+    padding-bottom: auto;
   }
 
   #intro-text {
-    font-size: 1.2em; /* Reduce el tamaño del texto del intro */
-    padding: 10px; /* Menos padding para ahorrar espacio */
-    max-width: 100%; /* Permite que el texto use todo el ancho disponible */
+    font-size: 1em; /* Texto más pequeño para mejorar la legibilidad */
+    padding: auto; /* Ajustar el padding */
+    margin: auto; /* Agregar un margen */
+    max-width: none; /* Permitir que ocupe el ancho disponible */
+  }
+
+  .container {
+    width: 100%; /* El contenedor debe ocupar todo el ancho */
+    margin: 0; /* Resetear los márgenes */
+    padding: 10px; /* Padding reducido */
   }
 
   #login-form {
-    padding: 1em; /* Menos padding para el formulario */
+    width: 100%; /* Que el formulario ocupe todo el ancho */
+    box-shadow: none; /* Opcional: quitar la sombra para un look más plano */
   }
 
   button[type="submit"] {
-    padding: 8px 16px; /* Botón más pequeño para que se ajuste mejor */
+    width: 100%; /* Que el botón se expanda */
   }
 
-  #logout {
-    padding: 8px 16px; /* Botón de cierre de sesión más pequeño */
+  .full-page-background {
+    padding: 0; /* Quitar el padding para el fondo */
   }
 
-  /* Asegúrate de que todos los textos sean legibles y no demasiado pequeños */
-  body {
-    font-size: 14px; /* Puede ser ajustado según necesidad */
+  #diary-page, #logout {
+    width: 100%; /* Que estos elementos ocupen todo el ancho */
   }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) { /* Smartphones en modo horizontal y tabletas pequeñas */
+  
+  #main-title {
+    text-shadow: 15px 7px 5px rgba(0, 0, 0, 0.5);
+    font-size: 3em; /* Adjust the size as needed */
+    margin-bottom: 0.5em; /* Spacing below the title */
+    color: #ffffff; /* White color for the title text */
+  }
+
+  #intro-text {
+    font-size: 1em; /* Texto más pequeño para mejorar la legibilidad */
+    padding: auto; /* Ajustar el padding */
+    margin: auto; /* Agregar un margen */
+    max-width: none; /* Permitir que ocupe el ancho disponible */
+  }
+
+  .container {
+    width: 100%; /* El contenedor debe ocupar todo el ancho */
+    margin: auto; /* Resetear los márgenes */
+    padding: auto; /* Padding reducido */
+  }
+
+  #login-form {
+    width: 100%; /* Que el formulario ocupe todo el ancho */
+    box-shadow: none; /* Opcional: quitar la sombra para un look más plano */
+  }
+
+  button[type="submit"] {
+    width: 100%; /* Que el botón se expanda */
+  }
+
+
+  .full-page-background {
+    padding: auto; /* Quitar el padding para el fondo */
+    
+  }
+
+  #diary-page, #logout {
+    width: 100%; /* Que estos elementos ocupen todo el ancho */
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) { /* Tabletas en ambos modos */
+  /* Ajustes específicos para tabletas */
+}
+
+@media only screen and (min-width: 1025px) { /* Dispositivos de escritorio y tabletas grandes */
+  /* Estilos para pantallas grandes, donde normalmente no necesitas cambiar mucho */
 }
