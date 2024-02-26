@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Libro de aventuras</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="full-page-background">
+
+<div class="title-container">
+  <h1 id="main-title">Nuestro libro de aventuras</h1>
+  <p id="intro-text">Esta es una dedicatoria para mi amada corteja, la quiero mucho y estuve horas y horas frente a la computadora viendo como hacer esto, la verdad si me sirve de practica para volver a programar jaja, espero que le guste</p>
+</div>
+
+
+<div class="container"> <!-- Contenedor para todo el contenido -->
+  <div id="login-page">
+    <form id="login-form">
+      <h2>Iniciar Sesión</h2>
+      <input type="text" id="username" placeholder="Ingresa tu nombre">
+      <button type="submit">Iniciar</button>
+    </form>
+  </div>
+</div> <!-- Fin del contenedor -->
+</div>
+
+<div class="diary-page-container"> <!-- Contenedor para todo el contenido -->
+  <div id="diary-page" class="hidden">
+    <h2>Bienvenido, <span id="user-name"></span></h2>
+    <button id="logout">Cerrar Sesión</button>
+    <!-- Aquí irá la línea temporal y las fotos -->
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
