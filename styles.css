@@ -143,3 +143,40 @@ button[type="submit"]:hover {
 .hidden {
   display: none;
 }
+
+/* Estilos responsivos para dispositivos con anchos menores a 768px (tabletas y móviles) */
+@media (max-width: 768px) {
+
+  .container, .full-page-background {
+    padding: 0px; /* Reduce el padding para dispositivos más pequeños */
+    width: 100%; /* Deja un pequeño margen en los lados */
+    height: auto;
+  }
+
+  .title-container h1 {
+    font-size: 3em; /* Reduce el tamaño del texto para que se ajuste mejor */
+  }
+
+  #intro-text {
+    font-size: 1.2em; /* Reduce el tamaño del texto del intro */
+    padding: 10px; /* Menos padding para ahorrar espacio */
+    max-width: 100%; /* Permite que el texto use todo el ancho disponible */
+  }
+
+  #login-form {
+    padding: 1em; /* Menos padding para el formulario */
+  }
+
+  button[type="submit"] {
+    padding: 8px 16px; /* Botón más pequeño para que se ajuste mejor */
+  }
+
+  #logout {
+    padding: 8px 16px; /* Botón de cierre de sesión más pequeño */
+  }
+
+  /* Asegúrate de que todos los textos sean legibles y no demasiado pequeños */
+  body {
+    font-size: 14px; /* Puede ser ajustado según necesidad */
+  }
+}
